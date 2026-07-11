@@ -7,6 +7,9 @@ from pydantic import BaseModel
 import sqlite3, bcrypt
 
 app = FastAPI()
+@app.get("/")
+def home():
+    return {"message": "Airbnb Backend API is running successfully!"}
 class UserRegister(BaseModel):
     username: str
     password: str
