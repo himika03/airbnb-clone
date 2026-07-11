@@ -6,10 +6,8 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 import sqlite3, bcrypt
 
-app = FastAPI()
-@app.get("/")
-def home():
-    return {"message": "Airbnb Backend API is running successfully!"}
+app = FastAPI(redirect_slashes=False)
+
 class UserRegister(BaseModel):
     username: str
     password: str
