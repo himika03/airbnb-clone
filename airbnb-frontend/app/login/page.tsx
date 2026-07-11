@@ -1,15 +1,16 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-const router = useRouter();
+
 
 export default function Login() {
+  const router = useRouter();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = async () => {
   try {
-    const res = await fetch("http://localhost:8000/login", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
