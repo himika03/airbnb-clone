@@ -1,0 +1,10 @@
+{
+  "title": "Cozy Apartment",
+  "description": "Nice place near city center",
+  "location": "Bengaluru",
+  "price_per_night": 1200,
+  "amenities": "WiFi, Kitchen, AC",
+  "photos": "",
+  "rating": 4,
+  "host_id": 1
+}
